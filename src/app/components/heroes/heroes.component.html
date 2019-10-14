@@ -1,0 +1,12 @@
+<h1>Héroes <small>Marvel y DC</small></h1>
+<hr>
+
+<div class="card-columns">
+
+    <!-- *ngFor="let heroe of heroes; let i = index" -->
+    <!-- [heroe] es el nombre de la propiedad que estoy enviando a heroe-tarjeta.component.ts 
+    "heroe" es el heroe que se está creando en el ciclo for *ngFor, por eso debe llevar el mismo nombre-->
+    <app-heroe-tarjeta (heroeSeleccionado)="verHeroe( $event )" [heroe]="heroe" [index]="i" *ngFor="let heroe of heroes; let i = index"></app-heroe-tarjeta>
+    <!-- $event es la fuerza para recibir el evento que estoy emitiendo desde el componente hijo -->
+
+</div>

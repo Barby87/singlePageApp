@@ -1,0 +1,15 @@
+<div class="card">
+    <img [src]="heroe.img" class="card-img-top img-fluid" [alt]="heroe.img">
+    <div class="card-block">
+        <h4 class="card-title">{{ heroe.nombre }}</h4>
+        <p class="card-text">{{ heroe.bio }}</p>
+        <p class="card-text"><small class="text-muted">{{heroe.aparicion}}</small></p>
+
+        <!--Crear función verHeroe en heroes.component.ts-->
+        <button (click)="verHeroe()" type="button" class="btn btn-outline-primary btn-block">Ver más...</button>
+
+        <!--El arreglo de routerLink se refiere a cada una de las secciones de la url-->
+        <!-- <a [routerLink]="['/heroe', i]" class="btn btn-outline-primary">ver más...</a> -->
+
+    </div>
+</div>
